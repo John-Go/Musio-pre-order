@@ -532,7 +532,7 @@ video {
   width: 100%;
   /*height: auto;*/
   z-index: -100;
-  background: url(../images/blur.jpg) no-repeat;
+  background: url(../images/background_musio.jpg) no-repeat;
   background-size: cover;
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
