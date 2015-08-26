@@ -1,0 +1,713 @@
+html, body {
+	width: 100%;
+}
+body {
+	line-height: 200%;
+	font-family: 'Open Sans', sans-serif; 
+}
+
+div.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+div#header {
+	display: block;
+	/*height: 640px;*/
+	background: url(../images/background_musio.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div#twitter {
+	display: block;
+	/*height: 640px;*/
+	background-color: #000000;
+}
+
+div#twitter div.wrap {
+	width: 520px;
+	height: 640px;
+	margin: 0 auto;
+	padding-top: 110px;
+	text-align: center;
+	position: relative;
+}
+
+div#bg {
+	display: block;
+	width: 100%;
+	height: 640px;
+	position: absolute;
+	opacity: 0.4;
+}
+
+div#header .blur {
+	display: block;
+	width: 100%;
+	height: 640px;
+	position: absolute;
+	opacity: 1.0;
+
+	background: url(../images/background_musio.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	-webkit-filter: blur(7px);
+	-moz-filter: blur(7px);
+	-o-filter: blur(7px);
+	-ms-filter: blur(7px);
+	filter: blur(7px);
+}
+
+div#header div.wrap {
+	width: 960px;
+	height: 640px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+div#play {
+	width: 100%;
+	position: absolute;
+	float: left;
+	left: 0;
+	top: 277px;
+}
+
+img#play_button {
+	opacity: 0.8;
+}
+
+div#unlike {
+	width: 240px;
+	float: right;
+	position: relative;
+	right: 14px;
+	top: 75px;
+	text-align: center;
+}
+
+div#unlike hr {
+	margin-bottom: 35px;
+}
+
+div#unlike img {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+div#line {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	position: absolute;
+	top: 605px;
+	color: #54eae9;
+	line-height: 35px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+div#mask {
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 640px;
+	background-color: #ffffff;
+}
+
+div.clear {
+	clear: both;
+}
+
+div#refer {
+	width: 960px;
+	height: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+div#refer img {
+	width: 886px;
+	padding: 57px 25px;
+}
+
+div#refer ul {
+	margin-top: 30px;
+	padding-top: 5px;
+}
+
+div#refer ul li {
+	margin: 0 30px 10px;
+}			
+
+button#indiegogo {
+	margin-top: 15px;
+	width: 240px;
+	height: 80px;
+
+	border: 2px solid #eb2684;
+	border-radius: 15px;
+	background-color: #eb2684;
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 170%;
+}
+
+button#indiegogo:focus, button#indiegogo:hover {  
+	-webkit-transition: background-color 0.3s linear;   
+	background-color: transparent;   
+
+	-webkit-transition: color 0.2s linear;   
+	color: #eb2684;
+
+	border: 2px solid #eb2684;
+}
+
+button#indiegogo span {
+	font-size: 28px;
+	font-weight: 800;
+	letter-spacing: -1px;
+}
+
+div#feature {
+	width: 960px;
+	margin: 0 auto;
+}
+
+div#feature div {
+	width: 680px;
+	margin: 0 auto;
+	padding: 30px 0 40px; 
+	text-align: center;
+}
+
+div#feature img {
+	width: 100%;
+	display: block;
+}
+
+div#feature h2 {
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	color: #2c2e32;
+}
+
+div#feature div.arrow {
+	width: 860px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #54eae9;
+}
+
+div#feature div.arrow img {
+	width: 680px;
+	margin: 0 auto;
+}
+
+div#feature div.arrow h2 {
+	color: #ffffff;
+}
+
+div#feature img.bottom {
+	width: 860px;
+	display: block;
+	margin: 0 auto;
+}
+
+div#reminder {
+	width: 680px;
+	margin: 20px auto;
+}
+
+div#reminder button#indiegogo {
+	width: 100%;
+	height: 80px;
+	font-size: 28px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+div#subscribe {
+	height: 240px;
+	background-color: #2c2e32;
+}
+
+div#subscribe div#sns {
+	margin-top: 50px;
+	text-align: center;
+}
+
+div#sns img {
+	margin-right: 20px;
+}
+
+div#subscribe div.wrap {
+	width: 960px;
+	height: 240px;
+	padding-top: 45px;
+	margin: 0 auto;
+}
+
+div#subscribe h2 {
+	margin: 0 0 6px;
+	color: #ffffff;
+	font-size: 22px;
+}
+
+div#subscribe p {
+	color: #ffffff;
+	font-weight: 300;
+	margin: 6px 0 0;
+}
+
+p.message {
+	margin: 0px;
+	opacity: 0;
+}
+
+button#submit {
+	width: 140px;
+	height: 34px;
+	border-radius: 5px;
+	background-color: #54eae9;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 600;
+	border: 2px solid #54eae9;
+	line-height: 100%;
+}
+
+button#submit:focus, button#submit:hover {  
+	-webkit-transition: background-color 0.1s linear;   
+	background-color: transparent;   
+
+	-webkit-transition: color 0.1s linear;   
+	color: #54eae9;
+	border: 2px solid #54eae9;
+}
+
+form .col-xs-6 {
+	padding-right: 0;
+}
+
+div#subscribe p.confidential {
+	color: #aaaaaa;
+	font-size: 12px; 
+}
+
+p#info {
+	color: #ffffff;
+}
+
+p#info a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+	div#header div.wrap {
+		width: 560px;
+	}
+
+	div#play {
+		width: 50%;
+	}
+
+	div#refer {
+		width: 560px;
+		height: 340px;
+	}
+
+	div#refer img {
+		width: 100%;
+	}
+
+	div#twitter div.wrap {
+		height: 500px;
+		padding-top: 40px;
+	}
+
+	div#bg {
+		height: 500px;
+	}
+
+	div#feature {
+		width: 560px;
+	}
+
+	div#feature div {
+		width: 100%;
+	}
+
+	div#feature div.arrow {
+		width: 100%;
+	}
+
+	div#feature div.arrow img {
+		width: 100%;
+	}
+
+	div#feature img.bottom {
+		width: 100%;
+	}
+
+	div#subscribe div.wrap {
+		width: 560px;
+	}
+
+	div#reminder {
+		width: 560px;
+		padding: 0 20px;
+	}
+
+	div#sns img {
+		margin-right: 3px;
+		width: 40px;
+	}
+}
+
+@media (min-width: 561px) and (max-width: 680px) {
+	div#header div.wrap {
+		width: 100%;
+	}
+
+	div#play {
+		width: 50%;
+	}
+
+	div#refer {
+		width: 100%;
+		height: 400px;
+	}
+
+	div#refer img {
+		width: 100%;
+	}
+
+	div#twitter div.wrap {
+		height: 520px;
+		padding-top: 50px;
+	}
+
+	div#bg {
+		height: 520px;
+	}
+
+	div#feature {
+		width: 100%;
+	}
+
+	div#feature div {
+		width: 100%;
+	}
+
+	div#feature div.arrow {
+		width: 100%;
+	}
+
+	div#feature div.arrow img {
+		width: 100%;
+	}
+
+	div#feature img.bottom {
+		width: 100%;
+	}
+
+	div#subscribe div.wrap {
+		width: 100%;
+	}
+
+	div#reminder {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	div#sns img {
+		margin-right: 5px;
+
+		width: 40px;
+	}
+
+}
+
+@media (min-width: 681px) and (max-width: 860px) {
+	div#header div.wrap {
+		width: 100%;
+	}
+
+	div#refer {
+		width: 100%;
+		height: 470px;
+	}
+
+	div#refer img {
+		width: 100%;
+	}
+
+	div#twitter div.wrap {
+		height: 560px;
+		padding-top: 70px;
+	}
+
+	div#bg {
+		height: 560px;
+	}
+
+	div#feature {
+		width: 100%;
+	}
+
+	div#feature div.arrow {
+		width: 100%;
+	}
+
+	div#feature img.bottom {
+		width: 100%;
+	}
+
+	div#subscribe div.wrap {
+		width: 100%;
+	}
+
+	div#sns img {
+		margin-right: 10px;
+		width: 50px;
+	}
+}
+
+@media (min-width: 861px) and (max-width: 960px) {
+	div#header div.wrap {
+		width: 100%;
+	}
+
+	div#refer {
+		width: 100%;
+		height: 500px;
+	}
+
+	div#twitter div.wrap {
+		height: 600px;
+		padding-top: 90px;
+	}
+
+	div#bg {
+		height: 600px;
+	}
+
+	div#feature {
+		width: 100%;
+	}
+
+	div#subscribe div.wrap {
+		width: 100%;
+	}
+}
+
+/** New Musio css **/
+
+.nav-cart-icon
+{
+	font-size:20px; 
+	height:50px;
+}
+
+
+
+video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /*min-width: 100%;
+  min-height: 50%;*/
+  /*max-height: 50%;*/
+  width: 100%;
+  /*height: auto;*/
+  z-index: -100;
+  background: url(../images/blur.jpg) no-repeat;
+  background-size: cover;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+
+#video-container
+{ 
+  position: relative;
+  height: 700px;
+}
+
+.navbar-bottom 
+{
+	margin-bottom: 0px;
+}
+
+/** Shop Css **/
+
+.shop-container
+{
+	margin-top: 80px;
+}
+
+.shipping-btn { 
+	border-radius: 0px;
+	margin-top: 10px;	
+  	color: #ffffff; 
+  	background-color: #EB1478; 
+  	border-color: #EB1478; 
+} 
+ 
+.shipping-btn:hover, 
+.shipping-btn:focus, 
+.shipping-btn:active, 
+.shipping-btn.active, 
+.open .dropdown-toggle.shipping-btn { 
+  	color: #ffffff; 
+  	background-color: #FA2589; 
+  	border-color: #EB1478; 
+} 
+ 
+.shipping-btn:active, 
+.shipping-btn.active, 
+.open .dropdown-toggle.shipping-btn { 
+  	background-image: none; 
+} 
+ 
+.shipping-btn.disabled, 
+.shipping-btn[disabled], 
+fieldset[disabled] .shipping-btn, 
+.shipping-btn.disabled:hover, 
+.shipping-btn[disabled]:hover, 
+fieldset[disabled] .shipping-btn:hover, 
+.shipping-btn.disabled:focus, 
+.shipping-btn[disabled]:focus, 
+fieldset[disabled] .shipping-btn:focus, 
+.shipping-btn.disabled:active, 
+.shipping-btn[disabled]:active, 
+fieldset[disabled] .shipping-btn:active, 
+.shipping-btn.disabled.active, 
+.shipping-btn[disabled].active, 
+fieldset[disabled] .shipping-btn.active { 
+  	background-color: #EB1478; 
+  	border-color: #EB1478; 
+} 
+ 
+.shipping-btn .badge { 
+  	color: #EB1478; 
+  	background-color: #ffffff; 
+}
+
+#shop-info
+{
+	margin-top: 50px;
+	font-weight:600;
+}
+
+.summary-box
+{
+	margin-top: 44px;
+	background-color:#eeeeee;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+.summary-text
+{
+	margin-bottom: 35px;
+}
+
+.musio-shop-img
+{
+	width: 100%;
+}
+
+.ui.button 
+{
+    display: inline-block;
+    cursor: pointer;
+    /*font-size: 2em;*/
+    font-weight: 900;
+    line-height: 1;
+    padding: 0.4em 1em;
+    position: relative;
+}
+
+.ui.button.blue 
+{
+
+    color: #002c45;
+    background: #0098ed;
+    color: #fff;
+}
+
+.count 
+{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.address-table-prefix
+{
+	width: 26%;
+}
+
+tr.address-table-font>td.address-table-prefix
+{
+	line-height: inherit;
+}
+
+td>input.form-control
+{
+	border: 0px solid #fff;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.0);
+}
+
+input[type="text"]:focus
+{
+    border-color: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: -webkit-focus-ring-color auto 3px;    
+}
+
+tr>td>div.form-group
+{
+	margin-bottom: 0px;
+}
+
+.address-table-font
+{
+	font-size: 15px;
+}
+
+#back,#edit
+{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #0098ed;
+	font-size: 16px;
+	font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;    
+}
+
+#shipping_sum_full_name,#shipping_sum_address,#shipping_sum_region
+{
+	line-height: 150%;
+}
+
+@media (min-width: 990px) and (max-width: 1250px) {
+	#video-container
+	{ 
+	  position: relative;
+	  height: 500px;
+	}
+
+}
