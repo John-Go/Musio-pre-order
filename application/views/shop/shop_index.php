@@ -1,4 +1,4 @@
-<div class="container" style="margin-bottom:30px;">	
+<div class="container">	
 	<div class="row shop-container">
 		
 		<div class="col-md-7">
