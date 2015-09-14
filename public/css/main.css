@@ -1,248 +1,39 @@
-/*html,body{height:100%}
-body{margin:0}
-#body{min-height:100%}
-#content{padding-bottom:1.9em}
-#foot{margin-top:-1.9em;height:1.9em}*/
+/** ===============================================================
+
+www.themusio.com
+
+Musio-pre-order CSS3
+
+=================================================================== **/
 
 html, body {
 	width: 100%;
 	height:100%;
+	font-size: 10px;
 }
 
 body {
-	min-height: 100%;
-	line-height: 200%;
-	font-family: 'Open Sans', sans-serif; 
+	min-height: 100%;	
+	font-family: Lato, sans-serif; 	
+	font-weight: lighter;
+}
+
+.line {
+	border: 1px solid #aaaaaa;
+}
+
+#wrap {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1100px;
 }
 
 div.row {
 	margin-left: 0;
 	margin-right: 0;
-}
-
-div#header {
-	display: block;
-	/*height: 640px;*/
-	background: url(../images/background_musio.jpg) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-div#twitter {
-	display: block;
-	/*height: 640px;*/
-	background-color: #000000;
-}
-
-div#twitter div.wrap {
-	width: 520px;
-	height: 640px;
-	margin: 0 auto;
-	padding-top: 110px;
-	text-align: center;
-	position: relative;
-}
-
-div#bg {
-	display: block;
-	width: 100%;
-	height: 640px;
-	position: absolute;
-	opacity: 0.4;
-}
-
-div#header .blur {
-	display: block;
-	width: 100%;
-	height: 640px;
-	position: absolute;
-	opacity: 1.0;
-
-	background: url(../images/background_musio.jpg) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-
-	-webkit-filter: blur(7px);
-	-moz-filter: blur(7px);
-	-o-filter: blur(7px);
-	-ms-filter: blur(7px);
-	filter: blur(7px);
-}
-
-div#header div.wrap {
-	width: 960px;
-	height: 640px;
-	margin: 0 auto;
-	text-align: center;
-	position: relative;
-}
-
-div#play {
-	width: 100%;
-	position: absolute;
-	float: left;
-	left: 0;
-	top: 277px;
-}
-
-img#play_button {
-	opacity: 0.8;
-}
-
-div#unlike {
-	width: 240px;
-	float: right;
-	position: relative;
-	right: 14px;
-	top: 75px;
-	text-align: center;
-}
-
-div#unlike hr {
-	margin-bottom: 35px;
-}
-
-div#unlike img {
-	width: 100%;
-	padding-bottom: 20px;
-}
-
-div#line {
-	width: 100%;
-	height: 35px;
-	text-align: center;
-	position: absolute;
-	top: 605px;
-	color: #54eae9;
-	line-height: 35px;
-	background-color: rgba(255, 255, 255, 0.3);
-}
-
-div#mask {
-	width: 100%;
-	height: 20px;
-	text-align: center;
-	position: absolute;
-	top: 640px;
-	background-color: #ffffff;
-}
-
-div.clear {
-	clear: both;
-}
-
-div#refer {
-	width: 960px;
-	height: 500px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-div#refer img {
-	width: 886px;
-	padding: 57px 25px;
-}
-
-div#refer ul {
-	margin-top: 30px;
-	padding-top: 5px;
-}
-
-div#refer ul li {
-	margin: 0 30px 10px;
-}			
-
-button#indiegogo {
-	margin-top: 15px;
-	width: 240px;
-	height: 80px;
-
-	border: 2px solid #eb2684;
-	border-radius: 15px;
-	background-color: #eb2684;
-	color: #ffffff;
-	font-size: 17px;
-	font-weight: 600;
-	line-height: 170%;
-}
-
-button#indiegogo:focus, button#indiegogo:hover {  
-	-webkit-transition: background-color 0.3s linear;   
-	background-color: transparent;   
-
-	-webkit-transition: color 0.2s linear;   
-	color: #eb2684;
-
-	border: 2px solid #eb2684;
-}
-
-button#indiegogo span {
-	font-size: 28px;
-	font-weight: 800;
-	letter-spacing: -1px;
-}
-
-div#feature {
-	width: 960px;
-	margin: 0 auto;
-}
-
-div#feature div {
-	width: 680px;
-	margin: 0 auto;
-	padding: 30px 0 40px; 
-	text-align: center;
-}
-
-div#feature img {
-	width: 100%;
-	display: block;
-}
-
-div#feature h2 {
-	font-size: 50px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	color: #2c2e32;
-}
-
-div#feature div.arrow {
-	width: 860px;
-	margin: 0 auto;
-	text-align: center;
-	background-color: #54eae9;
-}
-
-div#feature div.arrow img {
-	width: 680px;
-	margin: 0 auto;
-}
-
-div#feature div.arrow h2 {
-	color: #ffffff;
-}
-
-div#feature img.bottom {
-	width: 860px;
-	display: block;
-	margin: 0 auto;
-}
-
-div#reminder {
-	width: 680px;
-	margin: 20px auto;
-}
-
-div#reminder button#indiegogo {
-	width: 100%;
-	height: 80px;
-	font-size: 28px;
-	margin-top: 30px;
-	margin-bottom: 30px;
 }
 
 div#subscribe {
@@ -261,7 +52,7 @@ div#sns img {
 }
 
 div#subscribe div.wrap {
-	width: 960px;
+	width: 100%;
 	height: 240px;
 	padding-top: 45px;
 	margin: 0 auto;
@@ -305,261 +96,58 @@ button#submit:focus, button#submit:hover {
 	border: 2px solid #54eae9;
 }
 
-form .col-xs-6 {
-	padding-right: 0;
-}
-
 div#subscribe p.confidential {
 	color: #aaaaaa;
 	font-size: 12px; 
 }
 
-p#info {
-	color: #ffffff;
-}
+/** ================================================================
 
-p#info a {
-	color: #ffffff;
-	text-decoration: underline;
-}
+New Musio css
 
-@media (max-width: 560px) {
-	div#header div.wrap {
-		width: 560px;
-	}
+================================================================**/
 
-	div#play {
-		width: 50%;
-	}
-
-	div#refer {
-		width: 560px;
-		height: 340px;
-	}
-
-	div#refer img {
-		width: 100%;
-	}
-
-	div#twitter div.wrap {
-		height: 500px;
-		padding-top: 40px;
-	}
-
-	div#bg {
-		height: 500px;
-	}
-
-	div#feature {
-		width: 560px;
-	}
-
-	div#feature div {
-		width: 100%;
-	}
-
-	div#feature div.arrow {
-		width: 100%;
-	}
-
-	div#feature div.arrow img {
-		width: 100%;
-	}
-
-	div#feature img.bottom {
-		width: 100%;
-	}
-
-	div#subscribe div.wrap {
-		width: 560px;
-	}
-
-	div#reminder {
-		width: 560px;
-		padding: 0 20px;
-	}
-
-	div#sns img {
-		margin-right: 3px;
-		width: 40px;
-	}
-}
-
-@media (min-width: 561px) and (max-width: 680px) {
-	div#header div.wrap {
-		width: 100%;
-	}
-
-	div#play {
-		width: 50%;
-	}
-
-	div#refer {
-		width: 100%;
-		height: 400px;
-	}
-
-	div#refer img {
-		width: 100%;
-	}
-
-	div#twitter div.wrap {
-		height: 520px;
-		padding-top: 50px;
-	}
-
-	div#bg {
-		height: 520px;
-	}
-
-	div#feature {
-		width: 100%;
-	}
-
-	div#feature div {
-		width: 100%;
-	}
-
-	div#feature div.arrow {
-		width: 100%;
-	}
-
-	div#feature div.arrow img {
-		width: 100%;
-	}
-
-	div#feature img.bottom {
-		width: 100%;
-	}
-
-	div#subscribe div.wrap {
-		width: 100%;
-	}
-
-	div#reminder {
-		width: 100%;
-		padding: 0 20px;
-	}
-
-	div#sns img {
-		margin-right: 5px;
-
-		width: 40px;
-	}
-
-}
-
-@media (min-width: 681px) and (max-width: 860px) {
-	div#header div.wrap {
-		width: 100%;
-	}
-
-	div#refer {
-		width: 100%;
-		height: 470px;
-	}
-
-	div#refer img {
-		width: 100%;
-	}
-
-	div#twitter div.wrap {
-		height: 560px;
-		padding-top: 70px;
-	}
-
-	div#bg {
-		height: 560px;
-	}
-
-	div#feature {
-		width: 100%;
-	}
-
-	div#feature div.arrow {
-		width: 100%;
-	}
-
-	div#feature img.bottom {
-		width: 100%;
-	}
-
-	div#subscribe div.wrap {
-		width: 100%;
-	}
-
-	div#sns img {
-		margin-right: 10px;
-		width: 50px;
-	}
-}
-
-@media (min-width: 861px) and (max-width: 960px) {
-	div#header div.wrap {
-		width: 100%;
-	}
-
-	div#refer {
-		width: 100%;
-		height: 500px;
-	}
-
-	div#twitter div.wrap {
-		height: 600px;
-		padding-top: 90px;
-	}
-
-	div#bg {
-		height: 600px;
-	}
-
-	div#feature {
-		width: 100%;
-	}
-
-	div#subscribe div.wrap {
-		width: 100%;
-	}
-}
-
-/** New Musio css **/
-
-.nav-cart-icon
-{
-	font-size:20px; 
-	height:50px;
-}
 
 /** Main video **/
-video {
-  position: absolute;
-  right: 0;
-  bottom: 0;  
-  width: 100%;  
-  z-index: -100;
-  background: url(../images/background_musio.jpg) no-repeat;
-  background-size: cover;
-  -webkit-transition: 1s opacity;
-  transition: 1s opacity;
-}
 
 #main-video-wrap
 {
-	position: relative;
-  	height: 700px;	
+	position: relative;		
+  	height: 760px;
 }
 
-#main-video-wrap-text 
-{ 
-  width: 100%;
-  min-height: 100%;
-  height: auto !important;  
-  margin: -100px auto 0;
-  padding: 0 0 100px; 
-  position: relative;
+.main-video {
+  	position: absolute;
+  	right: 0;
+  	bottom: 0;  
+  	width: 100%;
+  	z-index: -100;
+  	background: url(../images/main.jpg) no-repeat;
+  	background-size: cover;
+}
+
+#main-video-wrap-text {
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;    
+    margin: -700px auto 0;
+    padding: 0 0 100px;
+    position: relative;
 }
 
 
+
+#main-video-wrap-static
+{
+	position: relative;	
+	margin-top: -86px;
+	right: 0;
+  	bottom: 0;  
+  	width: 100%;  	
+  	height: 600px;  	
+  	background-size: cover; 	
+  	background: url(../images/main.jpg) no-repeat center center;	
+}
 /** Main video end. **/
 
 
@@ -577,7 +165,7 @@ video {
 
 .shipping-btn { 
 	border-radius: 0px;
-	margin-top: 10px;	
+	margin-top: 5px;	
   	color: #ffffff; 
   	background-color: #EB1478; 
   	border-color: #EB1478; 
@@ -621,6 +209,25 @@ fieldset[disabled] .shipping-btn.active {
 .shipping-btn .badge { 
   	color: #EB1478; 
   	background-color: #ffffff; 
+}
+
+.shipping-btn-radius{
+	margin-right: 15px;
+	width: 120px;	
+	border-radius: 30px;
+}
+
+.shipping-btn-indiegogo{
+	margin-top: 40px;
+	padding-left: 30px; 
+	padding-right: 30px; 
+	font-size :25px;
+	border-radius: 30px;
+}
+
+.shipping-img {
+	margin-top: -6px;
+    margin-right: 6px;
 }
 
 #shop-info
@@ -722,12 +329,236 @@ tr>td>div.form-group
 	line-height: 150%;
 }
 
-@media (min-width: 990px) and (max-width: 1250px) {
-	#main-video-wrap
-	{ 
-	  position: relative;
-	  height: 500px;
-	}
-
+.musios {
+	margin-top: 27px;
+	color:#EB1478; 
+	font-size:23px;
 }
 
+.bottom-alink {
+	font-size:14px; 
+	color:#23527c;
+}
+
+.video-hidden-sm {
+	display: none !important; 
+}
+
+/** ======================================================================
+Nav font
+======================================================================**/
+
+.navbar-default {
+	background-color: rgba( 255, 255, 255, 0.0 );
+	border-color: rgba( 255, 255, 255, 0.0 );
+}
+
+.main-font {	
+	font-size: 50px;	
+	color: #fff;	
+}
+
+.main-font2 { 
+	margin-top: 80px;		
+	font-size: 3rem;
+	color: #fff;	
+}
+
+.main-font3 {
+	margin-top: 0.5rem;
+	font-size: 15px;
+	color:#0cffe1;
+}
+
+.main-logo {
+	width:15%; 
+	margin-top: 50px;
+}
+
+
+.btn-pre-order { 
+  	color: #FFF886; 
+  	background-color: #49247A; 
+  	border-color: #130269; 
+  	border-radius: 30px;
+} 
+ 
+.btn-pre-order:hover, 
+.btn-pre-order:focus, 
+.btn-pre-order:active, 
+.btn-pre-order.active, 
+.open .dropdown-toggle.btn-pre-order { 
+  	color: #FFF886; 
+  	background-color: #5A1AAD; 
+  	border-color: #130269; 
+} 
+ 
+.btn-pre-order:active, 
+.btn-pre-order.active, 
+.open .dropdown-toggle.btn-pre-order { 
+  	background-image: none; 
+} 
+ 
+.btn-pre-order.disabled, 
+.btn-pre-order[disabled], 
+fieldset[disabled] .btn-pre-order, 
+.btn-pre-order.disabled:hover, 
+.btn-pre-order[disabled]:hover, 
+fieldset[disabled] .btn-pre-order:hover, 
+.btn-pre-order.disabled:focus, 
+.btn-pre-order[disabled]:focus, 
+fieldset[disabled] .btn-pre-order:focus, 
+.btn-pre-order.disabled:active, 
+.btn-pre-order[disabled]:active, 
+fieldset[disabled] .btn-pre-order:active, 
+.btn-pre-order.disabled.active, 
+.btn-pre-order[disabled].active, 
+fieldset[disabled] .btn-pre-order.active { 
+  	background-color: #49247A; 
+  	border-color: #130269; 
+} 
+ 
+.btn-pre-order .badge { 
+  	color: #49247A; 
+  	background-color: #FFF886; 
+}
+
+.pre-order-style {
+	padding-right: 2.5rem;
+	padding-left: 2.5rem;    
+    font-size: 25px;
+}
+
+.article-img
+{
+	max-width: 100%;
+	padding-bottom: 40px;
+}
+
+.article-img-best-contents {
+    max-width: 100%;
+}
+
+.article-box-talking
+{
+	margin-top: 80px;	
+	height: auto;
+}
+
+.article-box
+{
+	margin-top: 80px;	
+	height: auto;
+}
+
+.article-title
+{
+	margin-top: 50px;
+	font-size: 50px;
+	color: #fff;
+}
+
+.article-text
+{
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	line-height: 33px;
+	color: #fff;		
+}
+
+.box-background-img {	
+  	width: 100%;
+  	z-index: 30;   	
+ 	background: url(../images/bg1.png) no-repeat center;
+  	-webkit-transition: 1s opacity;
+  	transition: 1s opacity;	
+}
+
+.box-background-img-features {
+  	width: 100%;   	
+ 	background: url(../images/bg_features.png) no-repeat center;  	
+  	-webkit-transition: 1s opacity;
+  	transition: 1s opacity;	
+}
+
+.arrow-lower {
+	width: 2rem;
+	max-width: 100%;
+	margin-top: 25px;	
+	cursor: pointer;
+}
+
+.component-container {
+	max-width:990px; 
+	width:75%; 
+	margin-top:50px;
+	padding-bottom: 75px;
+}
+
+.component-block{
+	padding-right: 0px; 
+    padding-left: 0px; 
+}
+
+.bottom-price {
+	color:#e74079; 
+	font-size:95px; 
+	font-weight:400; 
+	margin-bottom:25px;
+}
+
+.dropdown-style {
+	min-width:120px;
+}
+
+
+#head-logo {
+	color:#fff; 
+	font-size:24px;	
+}
+
+#a-language {
+	color:#fff; 
+	font-size:20px; 
+	background-color:rgba( 255, 255, 255, 0 );
+}
+
+
+/** ===============================================================
+
+Media query
+
+==================================================================**/
+
+
+/*@media (max-width:360px){html{font-size:10px;}}
+@media (min-width:361px) and (max-width:399px){html{font-size:11px;}}
+@media (min-width:400px) and (max-width:439px){html{font-size:12px;}}
+@media (min-width:440px) and (max-width:479px){html{font-size:13px;}}
+@media (min-width:480px) and (max-width:519px){html{font-size:14px;}}
+@media (min-width:520px) and (max-width:559px){html{font-size:15px;}}
+@media (min-width:560px) and (max-width:599px){html{font-size:16px;}}
+@media (min-width:600px) and (max-width:639px){html{font-size:17px;}}
+@media (min-width:640px) and (max-width:679px){html{font-size:18px;}}
+@media (min-width:680px) and (max-width:719px){html{font-size:19px;}}
+@media (min-width:720px) and (max-width:759px){html{font-size:20px;}}
+@media (min-width:760px) and (max-width:799px){html{font-size:21px;}}
+@media (min-width:800px) and (max-width:839px){html{font-size:22px;}}
+@media (min-width:840px) and (max-width:879px){html{font-size:23px;}}
+@media (min-width:880px){html{font-size:24px;}}*/
+
+@media (max-width:360px){html{font-size:10px;}}
+@media (min-width:461px) and (max-width:560px){html{font-size:11px;}}
+@media (min-width:561px) and (max-width:660px){html{font-size:12px;}}
+@media (min-width:661px) and (max-width:761px){html{font-size:13px;}}
+@media (min-width:762px) and (max-width:861px){html{font-size:14px;}}
+@media (min-width:862px) and (max-width:961px){html{font-size:15px;}}
+@media (min-width:962px) and (max-width:1061px){html{font-size:16px;}}
+@media (min-width:640px) and (max-width:1161px){html{font-size:18px;}}
+@media (min-width:1162px) and (max-width:1261px){html{font-size:19px;}}
+@media (min-width:1262px) and (max-width:1361px){html{font-size:20px;}}
+@media (min-width:1362px) and (max-width:1361px){html{font-size:21px;}}
+@media (min-width:1362px) and (max-width:1461px){html{font-size:22px;}}
+@media (min-width:1462px) and (max-width:1561px){html{font-size:23px;}}
+@media (min-width:1562px){html{font-size:24px;}}

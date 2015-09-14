@@ -3,64 +3,41 @@
 <script src="./public/js/jquery.transit.min.js"></script>
 <script src="./public/js/instafeed.min.js"></script>
 <script src="./public/js/jquery.number.min.js"></script>
-
-<?php if($page == 'index') { ?>
+<script src="./public/remodal/remodal.js"></script>
+<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 <script type="text/javascript">
-feed = new Instafeed({
-	get: 'user',
-	userId: 1935735475,
-	accessToken: '1935735475.467ede5.1ec5357204d643af89c2b0519fea7f09',
-	sortby: 'random',
-	resolution: 'standard_resolution',
-	links: 'false',
-	limit: '10',
-	// template: '<div id="caption">{{caption}} on my <a href="http://instagram.com/musio_aka">instagram</a></div><div id="bg" style="background: url({{image}}) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;"></div>',
-	template: '<div id="bg" style="background: url({{image}}) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;"></div>',
-	mock: true,
-	custom: {
-		images: [],
-		currentImage: 0,
-		showImage: function () {
-			var result, image;
-			image = this.options.custom.images[this.options.custom.currentImage];
-			result = this._makeTemplate(this.options.template, {
-				model: image,
-				id: image.id,
-				link: image.link,
-				image: image.images[this.options.resolution].url,
-				caption: this._getObjectProperty(image, 'caption.text'),
-				likes: image.likes.count,
-				comments: image.comments.count,
-				location: this._getObjectProperty(image, 'location.name')
-			});
-			$("#instafeed").css({opacity: 0.0})
-			$("#instafeed").html(result)
-			$("#instafeed").transit({opacity: 1.0}, 2000, 'snap')
-		}
-	},
-	success: function (data) {
-		this.options.custom.images = data.data; 
-		this.options.custom.showImage.call(this);
-	}
-});
-feed.run();
 
-setInterval(function () {setNext()}, 5000)
+var is_web = '<?=$is_web;?>';
+console.log(is_web);
 
-function setNext() {
-	var length, current;
-	current = feed.options.custom.currentImage;
-	length = feed.options.custom.images.length;
-
-	if (current < length - 1) {
-		feed.options.custom.currentImage++;
-		
-	} else {
-		feed.options.custom.currentImage = 0;
-	}
-
-	feed.options.custom.showImage.call(feed);
+function isValidEmailAddress(emailAddress) {
+  var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  return pattern.test(emailAddress);
 }
+
+$('a[name="language"]').click(function()
+{
+  var language = $(this).attr('id');
+  $.ajax(
+  {
+    type:'post',  
+    url:'/countryclassify/set_language',      
+    data:{
+      'language':language
+    },
+    dataType:'json',     
+    success:function(json){
+      if(json['status'])
+      {              
+        window.location.reload();
+      }
+      else
+      {
+       window.location.href = '/';
+      }
+    } 
+  });
+});
 
 $("button#submit").click(function (e) {
 	e.preventDefault()
@@ -68,66 +45,138 @@ $("button#submit").click(function (e) {
 	var params = {}
 	params.email = $("input#email").val()
 
-	// var ok = $('#ok')
-	// var remove = $('#remove')
-	var message = $('.message')
+	if(!isValidEmailAddress(params.email))
+	{
+		alert('You must provide a valid email.');
+		$("input#email").focus();
+	}
+	else
+	{
+		var message = $('.message')
 
-	$.ajax({
-		type: "POST",
-		data: params,
-		url: "register.php",
-		dataType: "json",
-		beforeSend: function() {
-			$("input#email").attr("placeholder", "Sending ...")
-		},
-		success: function(json) {
-			// alert(json.message)
-			if (json.status) {
-				message.text(json.message)
-				message.css("color", "#01df01")
-				message.css("opacity", 1.0)
-				message.delay(2000).animate({opacity: "0.0"})
+		$.ajax({
+			type: "POST",
+			data: params,
+			url: "/sendmail/send",
+			dataType: "json",
+			beforeSend: function() {
+				$("input#email").attr("placeholder", "Sending ...")
+			},
+			success: function(json) {
+				// alert(json.message)
+				if (json.status) {
+					message.text(json.message)
+					message.css("color", "#01df01")
+					message.css("opacity", 1.0)
+					message.delay(2000).animate({opacity: "0.0"})
 
-				// ok.show()
-				// ok.delay(2000).fadeOut(500)
-			} else {
-				message.text(json.message)
+					// ok.show()
+					// ok.delay(2000).fadeOut(500)
+				} else {
+					message.text(json.message)
+					message.css("color", "#ff8000")
+					message.css("opacity", 1.0)
+					message.delay(2000).animate({opacity: "0.0"})
+					// remove.show()
+					// remove.delay(2000).fadeOut(500)	
+				}
+			},
+			error : function(error) {
+				// alert("Please try again.")
+				message.text("Please try again.")
 				message.css("color", "#ff8000")
 				message.css("opacity", 1.0)
 				message.delay(2000).animate({opacity: "0.0"})
+
 				// remove.show()
-				// remove.delay(2000).fadeOut(500)	
+				// remove.delay(2000).fadeOut(500)
+			},
+			complete: function() {
+				$("input#email").attr("placeholder", "Enter your email.")
 			}
-		},
-		error : function(error) {
-			// alert("Please try again.")
-			message.text("Please try again.")
-			message.css("color", "#ff8000")
-			message.css("opacity", 1.0)
-			message.delay(2000).animate({opacity: "0.0"})
+		})
+	}	
+})
 
-			// remove.show()
-			// remove.delay(2000).fadeOut(500)
-		},
-		complete: function() {
-			$("input#email").attr("placeholder", "Enter your email.")
+$(".arrow-lower").click(function() {	
+	$('html,body').animate({scrollTop:$("div.article-box-talking").offset().top - 60}, 500)
+})
+
+jQuery(function() { // runs after DOM has loaded;
+
+	if(is_web == 'true')
+	{
+		resizeToCover()
+		jQuery(window).resize(function () { resizeToCover(); });
+	}
+	else // Mobile or Tablet
+	{
+		$('#main-video-wrap-static').css('display','inline-block');
+		$('#main-video-wrap').css('display','none');
+		$('#main-video-wrap-text').css('display','none');
+	}
+    
+    // jQuery(window).trigger('resize');
+});
+
+
+
+function resizeToCover() {
+	
+	windowWidth = $(window).width();
+
+	if(windowWidth < 1510)
+	{
+		var mainWrapHight = $('#main-video-wrap').height() - $('.main-video').height();
+		min = 1510 - windowWidth;
+		
+		console.log(min)
+		if(windowWidth < 1370)
+		{
+			$('div#main-video-wrap').css('min-width', '1370px' );
+			$('div#main-video-wrap').css('margin-top', '-140px' );
 		}
-	})
+		else
+		{
+			$('div#main-video-wrap').css('margin-top', '-'+min+'px' );
+		}		
+	}
+	else
+	{
+		$('div#main-video-wrap').css('margin-top', '0px' );		
+		$('#main-video-wrap').css('height','760px');
+	}   
+};
 
-	$("input#email").val("")
+
+// youtube load api
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var players
+
+function onYouTubeIframeAPIReady() {
+	players = new YT.Player('youtube_player', {
+	  height: '360',
+	  width: '640',
+	  videoId: '7FE8tuQOUbU'	  
+	});
+}
+
+$('#video_play_img').click(function(){	
+	players.playVideo();
 })
 
-$("button#down").click(function() {
-	$('html,body').animate({scrollTop:$("div#get").offset().top - 120}, 500)
-	// $("input#email").focus()
-})
+$('body').delegate('.remodal-wrapper','click',function(){	
+	players.pauseVideo();
+});
 
-$("button#indiegogo").click(function() {
-	window.location = "https://www.indiegogo.com/projects/musio-your-curious-new-friend"
-})
+// youtube end.
+
 </script>
-
-<?php } else if($page == 'shop') { ?>
+<?php if($page == 'shop') { ?>
 <script src="./public/js/jquery.countries.js"></script>
 <script src="./public/js/creditly.js"></script>
 <script type="text/javascript">
@@ -137,11 +186,6 @@ var quantity = 0;
 // Select country
 populateCountries("country");
 populateCountries("billing_country");
-
-function isValidEmailAddress(emailAddress) {
-  var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  return pattern.test(emailAddress);
-}
 
 function inputTotal(count)
 {
@@ -183,8 +227,6 @@ $('#billing_my_shipping').click(function () {
 		$('#billing_my_shipping_table').css('display','inline-table');	
 	}
 })
-
-
 
 // has-error
 

@@ -1,3 +1,8 @@
+<?php 
+    require('./application/controllers/countryclassify.php');
+    $countryclassifyClass = new CountryClassify;
+    $countryclassifyClass->setLanguage();
+?>
 <!DOCTYPE html>
 <html lang="en">
   	<head>
@@ -24,7 +29,7 @@
 
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	    <meta property="og:url" content="http://akaintelligence.com/musio/" />
 		<meta property="og:image" content="http://akaintelligence.com/musio/images/logo_musio.png" />
@@ -34,11 +39,14 @@
 		<title>Musio</title>
 
 	    <!-- Bootstrap core CSS -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	    
+	    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 
 	    <!-- Custom styles for this template -->	    
 		<link href="./public/css/main.css" type="text/css" rel="stylesheet">
+		<link href="./public/remodal/remodal-default-theme.css" type="text/css" rel="stylesheet">
+		<link href="./public/remodal/remodal.css" type="text/css" rel="stylesheet">
+		<link href="./public/css/effect.css" type="text/css" rel="stylesheet">
 
 	    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -51,24 +59,5 @@
 	</head>
 
 	<body>
-		<!-- Static navbar -->
-	    <nav class="navbar navbar-default navbar-static-top navbar-bottom">
-	      	<div class="container">
-		        <div class="navbar-header">
-		          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			            <span class="sr-only">Toggle navigation</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-		          	</button>
-		          	<a class="navbar-brand" href="/">Musio Logo</a>
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          	<ul class="nav navbar-nav navbar-right">
-		            	<li><a href="/shop" class="nav-cart-icon"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
-		          	</ul>
-		        </div><!--/.nav-collapse -->
-		    </div>
-	    </nav>
-
-
+	
+	    

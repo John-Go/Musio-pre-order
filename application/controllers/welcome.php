@@ -17,7 +17,8 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	
+	function index()
 	{		
 		require_once 'mobile_detect.php';
 		$detect = new Mobile_Detect;
@@ -25,10 +26,10 @@ class Welcome extends CI_Controller {
 
 		$is_mobile = $detect->isMobile();
 		$is_tablet = $detect->isTablet();
-		$is_web = true;
+		$is_web = 'true';
 
 		if ($is_mobile || $is_tablet) {
-		  $is_web = false;
+		  $is_web = 'false';
 		}
 
 		log_message('error','is mobile => '.$is_mobile);
@@ -36,12 +37,12 @@ class Welcome extends CI_Controller {
 		log_message('error','is web => '.$is_web);
 
 		$js['is_web'] = $is_web;
-		$js['page'] = 'index';
+		$js['page'] = '';
 
 		$this->load->view('head');
 		$this->load->view('index');
 		$this->load->view('footer');
 		$this->load->view('/jquery/js',$js);
 
-	}
+	}	
 }

@@ -12,7 +12,7 @@ class Shop extends CI_Controller {
 		log_message('error',current_url());
 	}   
 	
-	public function index()
+	function index()
 	{
 		$this->start_log();
 		$js['page'] = 'shop';
