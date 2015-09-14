@@ -1,14 +1,16 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script  src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="./public/js/jquery.transit.min.js"></script>
-<script src="./public/js/instafeed.min.js"></script>
-<script src="./public/js/jquery.number.min.js"></script>
 <script src="./public/remodal/remodal.js"></script>
-<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 <script type="text/javascript">
-
 var is_web = '<?=$is_web;?>';
-console.log(is_web);
+var is_cn = "<?=$this->session->userdata('language');?>";
+
+if(is_cn == 'cn')
+{
+	$('body').css('font-weight','500');
+}
 
 function isValidEmailAddress(emailAddress) {
   var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
@@ -62,8 +64,7 @@ $("button#submit").click(function (e) {
 			beforeSend: function() {
 				$("input#email").attr("placeholder", "Sending ...")
 			},
-			success: function(json) {
-				// alert(json.message)
+			success: function(json) {				
 				if (json.status) {
 					message.text(json.message)
 					message.css("color", "#01df01")
@@ -81,7 +82,7 @@ $("button#submit").click(function (e) {
 					// remove.delay(2000).fadeOut(500)	
 				}
 			},
-			error : function(error) {
+			error : function(error) {				
 				// alert("Please try again.")
 				message.text("Please try again.")
 				message.css("color", "#ff8000")
@@ -119,8 +120,6 @@ jQuery(function() { // runs after DOM has loaded;
     // jQuery(window).trigger('resize');
 });
 
-
-
 function resizeToCover() {
 	
 	windowWidth = $(window).width();
@@ -128,12 +127,11 @@ function resizeToCover() {
 	if(windowWidth < 1510)
 	{
 		var mainWrapHight = $('#main-video-wrap').height() - $('.main-video').height();
-		min = 1510 - windowWidth;
+		min = 1510 - windowWidth;	
 		
-		console.log(min)
 		if(windowWidth < 1370)
 		{
-			$('div#main-video-wrap').css('min-width', '1370px' );
+			$('div#main-video-wrap').css('min-width', '1256px' );
 			$('div#main-video-wrap').css('margin-top', '-140px' );
 		}
 		else
@@ -148,8 +146,7 @@ function resizeToCover() {
 	}   
 };
 
-
-// youtube load api
+//youtube load api
 var tag = document.createElement('script');
 tag.src = "//www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -178,6 +175,7 @@ $('body').delegate('.remodal-wrapper','click',function(){
 </script>
 <?php if($page == 'shop') { ?>
 <script src="./public/js/jquery.countries.js"></script>
+<script src="./public/js/jquery.number.min.js"></script>
 <script src="./public/js/creditly.js"></script>
 <script type="text/javascript">
 var count = parseInt($('.count').text());

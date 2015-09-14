@@ -16,13 +16,15 @@ class Sendmail extends CI_Controller {
 
 	function sendEmail($to, $subject, $message)
     {
-        $this->email->from('musio@akaintelligence.com', 'Musio');
+        // $this->email->from('musio@akaintelligence.com', 'Musio');
+        $this->email->from('aa@akaon.com', 'Musio');
         $this->email->to($to);
         $this->email->set_mailtype("html");
         //$this->email->bcc('musio@akaintelligence.com');
 
         $this->email->subject($subject);
         $this->email->message($message);
+        log_message('error','DEBUG => '.print_r($this->email->print_debugger(),true));
         return $this->email->send();
     }
 

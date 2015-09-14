@@ -71,6 +71,7 @@ div#subscribe p {
 }
 
 p.message {
+	font-size: 15px;
 	margin: 0px;
 	opacity: 0;
 }
@@ -358,8 +359,14 @@ Nav font
 	color: #fff;	
 }
 
+.orig-price { 
+	margin-top: 50px;
+	font-size: 1.8rem;
+	color: #fff;	
+}
+
 .main-font2 { 
-	margin-top: 80px;		
+	margin-top: -20px;
 	font-size: 3rem;
 	color: #fff;	
 }
@@ -501,10 +508,18 @@ fieldset[disabled] .btn-pre-order.active {
     padding-left: 0px; 
 }
 
+.bottom-price2 {
+	color:#e74079; 
+	font-size:50px; 
+	font-weight:400; 
+	/*margin-bottom:25px;*/
+}
+
 .bottom-price {
 	color:#e74079; 
 	font-size:95px; 
-	font-weight:400; 
+	font-weight:400;
+	margin-top: -30px; 
 	margin-bottom:25px;
 }
 
@@ -562,3 +577,7 @@ Media query
 @media (min-width:1362px) and (max-width:1461px){html{font-size:22px;}}
 @media (min-width:1462px) and (max-width:1561px){html{font-size:23px;}}
 @media (min-width:1562px){html{font-size:24px;}}
+
+/*@media (max-width:1562px) {
+	html{font-size:24px;}
+}*/

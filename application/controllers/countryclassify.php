@@ -15,6 +15,7 @@ class CountryClassify extends CI_Controller {
 	function country()
 	{
         $ip = $_SERVER['REMOTE_ADDR'];
+        //$ip = '202.112.255.255'; // cn
         // $ip = '182.225.201.6'; // kr        
 
         // if($ip == '182.225.201.6')
@@ -57,6 +58,7 @@ class CountryClassify extends CI_Controller {
         {            
             log_message('error','Not Session Language');
             $localCountry = $this->country();
+            log_message('error','Not Session Language => '.$localCountry);
 
             switch ($localCountry) {
                 case 'kr':
@@ -65,6 +67,10 @@ class CountryClassify extends CI_Controller {
 
                 case 'jp':
                     $language = 'jp';
+                    break;               
+
+                case 'cn':
+                    $language = 'cn';
                     break;               
                 
                 default:

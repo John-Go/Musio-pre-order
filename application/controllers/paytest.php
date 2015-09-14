@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Shop extends CI_Controller {
+class Paytest extends CI_Controller {
 
 	function __construct()
     {
@@ -8,19 +8,16 @@ class Shop extends CI_Controller {
         parent::__construct();        
     }
 
-    function start_log(){		
-		log_message('error',current_url());
-	}   
-	
+    
+
 	function index()
 	{
 		$this->start_log();
-		$js['page'] = 'shop';
+		$js['page'] = ;	
 
 		$this->load->view('head');
-		$this->load->view('/shop/shop_index');
+		$this->load->view('index');
 		$this->load->view('footer');
 		$this->load->view('/jquery/js',$js);
-	}
+	}	
 }
-

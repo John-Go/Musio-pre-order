@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	
-	function index()
+	public function index()
 	{		
 		require_once 'mobile_detect.php';
 		$detect = new Mobile_Detect;

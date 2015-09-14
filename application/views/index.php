@@ -13,6 +13,8 @@
 		                <li><a href="#" name="language" id="kr">한국어</a></li>
 		                <li role="separator" class="divider"></li>
 		                <li><a href="#" name="language" id="jp">日本語</a></li>
+		                <li role="separator" class="divider"></li>
+		                <li><a href="#" name="language" id="cn">中文 (中国)</a></li>
 		              </ul>
 		            </li>
 	            </ul>
@@ -33,8 +35,10 @@
 				<img src="./public/images/logo.png" class="main-logo">
 			</div>
 	    	<p class="main-font"><?=lang('main_index_1');?></p>
-	    	<p class="main-font2">$<?=PRICE;?>~</p>	    	
-	    	<a href="/shop"class="btn btn-pre-order pre-order-style btn-lg"><b><?=lang('main_index_2');?></b></a>	    	
+	    	<p class="orig-price"><s>$<?=ORIG_PRICE;?>~</s></p>
+	    	<p class="main-font2">$<?=PRICE;?>~</p>
+	    	<button data-celery="55e802bde0a1f903007ea103" data-celery-version="v2" class="btn btn-pre-order pre-order-style btn-lg" style="margin-top: -15px;"><b><?=lang('main_index_2');?></b></button>
+			<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 	    	<p class="main-font3"><?=lang('main_index_2_1');?></p>
 	    	<img src="./public/images/arrow_lower.png" class="arrow-lower" onmouseenter="this.src = './public/images/arrow_lower_on.png'" onmouseleave="this.src = './public/images/arrow_lower.png'">
 	    </div>
@@ -46,10 +50,12 @@
 	    <div class="text-center">
 	    	<img src="./public/images/logo.png" class="main-logo" style="margin-top:70px;">
 	    	<p class="main-font"><?=lang('main_index_1');?></p>
-	    	<p class="main-font2" style="margin-top: 40px;">$<?=PRICE;?>~</p>	    	
-	    	<a href="/shop"class="btn btn-pre-order pre-order-style btn-lg"><b><?=lang('main_index_2');?></b></a>	    	
+	    	<p class="orig-price"><s>$<?=ORIG_PRICE;?>~</s></p>
+	    	<p class="main-font2" style="margin-top: -20px;">$<?=PRICE;?>~</p>
+	    	<button data-celery="55e802bde0a1f903007ea103" data-celery-version="v2" class="btn btn-pre-order pre-order-style btn-lg" style="margin-top: -15px;"><b><?=lang('main_index_2');?></b></button>
+			<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 	    	<p class="main-font3"><?=lang('main_index_2_1');?></p>
-	    	<img src="./public/images/arrow_lower.png" class="arrow-lower" onmouseenter="this.src = './public/images/arrow_lower_on.png'" onmouseleave="this.src = './public/images/arrow_lower.png'">
+	    	<!-- <img src="./public/images/arrow_lower.png" class="arrow-lower" onmouseenter="this.src = './public/images/arrow_lower_on.png'" onmouseleave="this.src = './public/images/arrow_lower.png'"> -->
 	    </div>
 	</div>
 	<!-- Mobile or Tablet end. -->
@@ -188,11 +194,13 @@
 				
 			</div> <!-- container end. -->		
 
+			<p class="bottom-price2"><s>$<?=ORIG_PRICE;?>~</s></p>
 			<p class="bottom-price">$<?=PRICE;?>~</p>
 			
 		</div>
 		<div class="text-center">			
-			<a href="/shop" class="btn btn-pre-order pre-order-style btn-lg" style="margin-top:-27px;"><b><?=lang('main_index_2');?></b></a>
+			<button data-celery="55e802bde0a1f903007ea103" data-celery-version="v2" class="btn btn-pre-order pre-order-style btn-lg" style="margin-top:-27px;"><b><?=lang('main_index_2');?></b></button>
+			<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 		</div>
 	
 		<div class="row text-center" style="margin-top:90px;">
