@@ -4,7 +4,7 @@
 Main page
 **/
 
-$lang['main_index_1'] = 'Meet Musio, your curious new friend';
+$lang['main_index_1'] = 'Meet Musio K, your curious new friend';
 $lang['main_index_2'] = 'Pre-order now';
 $lang['main_index_2_1'] = '2016년 6월 배송예정 (공장 일정에 따라 앞당겨질 수 있음) ';
 
@@ -24,7 +24,7 @@ $lang['main_index_11'] = 'Features & Specs';
 $lang['main_index_12'] = '모든 제품은 친환경 소재로 만들어집니다.';
 
 $lang['main_index_13'] = 'MUSIO K Component';
-$lang['main_index_14'] = 'MUSIO + Sophy + Board Books(3) + Flash Card(4) + Story Book(1)<br>+ Text Book(2) + Guide Book(1)';
+$lang['main_index_14'] = 'MUSIO K + Sophy + Board Books(3) + Flash Card(4) + Story Book(1)<br>+ Text Book(2) + Guide Book(1)';
 
 $lang['main_index_15'] = 'Board Book(3)';
 $lang['main_index_16'] = '뮤지오와 함께 공룡시대, 정글 등을 탐험하며 즐겁게 영어게임을 할 수 있습니다.';

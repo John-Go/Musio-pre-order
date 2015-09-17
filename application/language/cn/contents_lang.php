@@ -4,7 +4,7 @@
 Main page
 **/
 
-$lang['main_index_1'] = '与Musio相遇，Musio成为您的稀奇朋友';
+$lang['main_index_1'] = '与Musio K相遇，Musio K成为您的稀奇朋友';
 $lang['main_index_2'] = '现在预定';
 $lang['main_index_2_1'] = '2016年6月开始送货（根据工厂日程能提前开始）';
 
@@ -12,7 +12,7 @@ $lang['main_index_3'] = '交谈';
 $lang['main_index_4'] = '通过与Musio交谈，孩子自然的迷入到英语环境中，记住在交谈中包含着的教育要素。<br>Musio记住与孩子的交谈，把交谈内容反映到下次的交谈中，成为孩子的外籍朋友。';
 
 $lang['main_index_5'] = '游戏';
-$lang['main_index_6'] = '<em>"游戏在幼年期最为纯粹人类精神活动"</em> - 福禄培尔<br>在游戏里包括 说话、倾听、问答、思考等，人类沟通所需要的一切。<br>用英语来进行这些游戏，能有更好的吗？';
+$lang['main_index_6'] = '<em>"游戏是儿童时期最纯洁和最精神的人类活动"</em> - 福禄培尔<br>在游戏里包括 说话、倾听、问答、思考等，人类沟通所需要的一切。<br>用英语来进行这些游戏，能有更好的吗？';
 
 $lang['main_index_7'] = '教育';
 $lang['main_index_8'] = 'Sophy是Musio的朋友，能把Musio与其他套装部件进行连接。<br>握住Sophy的孩子可与Musio一起探索恐龙时代、演奏乐器、朗读童话，愉快的学习英语。';
@@ -24,7 +24,7 @@ $lang['main_index_11'] = '特征及规格';
 $lang['main_index_12'] = '所有产品都是由亲环境材料制成的';
 
 $lang['main_index_13'] = 'Musio K的组成部分';
-$lang['main_index_14'] = 'MUSIO + Sophy + 纸板书(3) + 闪光卡(4) + 故事书(1)<br>+ 教材(2) + 词典(1)';
+$lang['main_index_14'] = 'MUSIO K+ Sophy + 纸板书(3) + 闪光卡(4) + 故事书(1)<br>+ 教材(2) + 词典(1)';
 
 $lang['main_index_15'] = 'Board Book(3)';
 $lang['main_index_16'] = '与Musio一起探索恐龙时代、密林等环境，愉快的进行英语游戏。';

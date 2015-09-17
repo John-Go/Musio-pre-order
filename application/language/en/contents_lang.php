@@ -4,7 +4,7 @@
 Main page
 **/
 
-$lang['main_index_1'] = 'Meet Musio, your curious new friend';
+$lang['main_index_1'] = 'Meet Musio K, your curious new friend';
 $lang['main_index_2'] = 'Pre-order now';
 $lang['main_index_2_1'] = ' Delivery is available from June, 2016.<br> (This is subject to change pending an earlier fabrication date.) ';
 
@@ -29,7 +29,7 @@ $lang['main_index_11'] = 'Features & Specs';
 $lang['main_index_12'] = 'All products are made with environmentally friendly materials';
 
 $lang['main_index_13'] = 'MUSIO K Component';
-$lang['main_index_14'] = 'MUSIO + Sophy + Board Books(3) + Flash Cards(4) + Story Book(1)<br>+ Text Books(2) + Guide Book(1)';
+$lang['main_index_14'] = 'MUSIO K + Sophy + Board Books(3) + Flash Cards(4) + Story Book(1)<br>+ Text Books(2) + Guide Book(1)';
 
 $lang['main_index_15'] = 'Board Books(3)';
 $lang['main_index_16'] = 'The board book is an interactive book where children explore the world of dinosaurs. Children can learn about different types of dinosaurs, hear conversation between the dinosaurs, and even play games with Musio and Sophy.';

@@ -25,7 +25,7 @@ $lang['main_index_11'] = '技術仕様';
 $lang['main_index_12'] = 'すべての製品は環境にやさしい素材を使っています。';
 
 $lang['main_index_13'] = 'Musio K パッケージ構成品';
-$lang['main_index_14'] = 'ミュージオ&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspソフィ&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspボードブック(3)&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspフラッシュカード(4)&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspストーリーブック(1)<br>+&nbsp;&nbsp;&nbspテキストブック(2)　+&nbsp;&nbsp;&nbspミュージオガイドブック(1)';
+$lang['main_index_14'] = 'ミュージオ K&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspソフィ&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspボードブック(3)&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspフラッシュカード(4)&nbsp;&nbsp;&nbsp+&nbsp;&nbsp;&nbspストーリーブック(1)<br>+&nbsp;&nbsp;&nbspテキストブック(2)　+&nbsp;&nbsp;&nbspミュージオガイドブック(1)';
 
 $lang['main_index_15'] = 'Board Book(3)';
 $lang['main_index_16'] = 'ミュージオと一緒に恐竜時代、ジャングルなどを探検しながら楽しく英語ゲームをプレイします。';

@@ -210,7 +210,7 @@
 				<p class="article-text" style="font-size:30px; margin-top: 50px; color:#333;"><b><?=lang('main_index_26');?></b></p>
 				<p class="article-text" style="font-size:30px; margin-top: -10px; color:#e81f79;"><b><?=lang('main_index_27');?></b></p>
 				<br>
-				<a href="https://www.indiegogo.com/projects/musio-your-curious-new-friend" target="_blank" class="btn shipping-btn shipping-btn-indiegogo btn-lg">Musio Indiegogo Campaign <img src="./public/images/arrow_go.png" style="width:11%;"></a>
+				<a href="https://www.indiegogo.com/projects/musio-your-curious-new-friend" target="_blank" class="btn shipping-btn shipping-btn-indiegogo btn-lg">Musio S Indiegogo Campaign <img src="./public/images/arrow_go.png" style="width:11%;"></a>
 				<p class="musios"><?=lang('main_index_28')?></p>
 			</div>
 		</div>		
