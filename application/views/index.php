@@ -5,6 +5,7 @@
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse navbar-right">	          	
 	          	<ul class="nav navbar-nav">
+	          		<li><a href="http://blog.themusio.com" target="_blank" id="a-language">Blog</a></li>
 		          	<li class="dropdown">
 		              <a href="#" id="a-language" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="./public/images/icon_lang.png" style="margin-top:-3px"> Language <span class="caret"></span></a>
 		              <ul class="dropdown-menu dropdown-style" style="border-top-left-radius:4px; border-top-right-radius:4px;">
